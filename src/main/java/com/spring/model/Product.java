@@ -13,6 +13,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    private String productCode;
+
     @NotEmpty(message = "Name is Mandatory")
     private String name;
 
