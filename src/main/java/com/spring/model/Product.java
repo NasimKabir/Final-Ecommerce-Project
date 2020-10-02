@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+
 @Entity
 @Data
 public class Product {
@@ -23,9 +25,9 @@ public class Product {
     private String image;
 
     @NotNull(message = "price is mandatory")
-    private Double mainPrice;
+    private BigDecimal mainPrice;
 
-    private Double discountPrice;
+    private BigDecimal discountPrice;
 
     private String discountNote;
 
